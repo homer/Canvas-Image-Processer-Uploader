@@ -1,0 +1,25 @@
+.drop-area{
+    position: relative;
+    width:300px;
+    height:300px;
+    color:#961F30;
+    background-color: #CC2A41;
+    text-align: center;
+    border: 10px dashed #961F30;
+}
+.drop-area.active{
+    cursor:copy;
+    color:#424254;
+    border: 10px dashed #424254;
+    background-color: #6E6E8C;
+}
+#dropImg{
+    max-height: 100%;
+    max-width: 100%;
+}
+.is-hidden{
+    display: none !important;
+}
+#rawImage,#canvas-large,#canvas-thumb{
+    display: none;
+}

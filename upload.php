@@ -1,5 +1,5 @@
 <?php
-$file='myImage.jpeg';
+$file = md5(uniqid()).'.jpg';
 $handle = fopen($file,'w');
 $data = explode(",", $_POST['imgthumb']);
 fwrite($handle,base64_decode($data[1]));
