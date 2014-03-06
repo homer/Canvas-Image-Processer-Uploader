@@ -13,6 +13,10 @@ $(function() {
 
     $( "#draggable" ).draggable({cursor: "move"});
 
+//    $("#draggable").offset(); // Object {top: 80.875, left: 9}
+//    $("#draggable").parent().offset();  // Object {top: 79.875, left: 8}
+
+
     $("#zoom-in").on("click",function(){
         imageWidth = imageWidth * 1.1;
         $draggableImage.css("width",imageWidth);
@@ -24,18 +28,18 @@ $(function() {
 });
 </script>
 <style>
-    #image-container{
-        width:600px;
-        height:500px;
-        border:1px solid #ccc;
-        overflow: hidden;
-    }
-    .draggable-img{
-        width:500px;
-    }
+#image-container{
+    width:600px;
+    height:500px;
+    border:1px solid #ccc;
+    overflow: hidden;
+}
+.draggable-img{
+    width:500px;
+}
 </style>
 <body>
-    <h1>Image Processor</h1>
+    <h1>Oscilatory Processor</h1>
     <div id="image-container">
         <img id="draggable" class="draggable-img" src="image_demo.jpg"/>
     </div>

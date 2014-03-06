@@ -6,7 +6,7 @@
     <script src="../jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
     <title>Draggable Image</title>
 </head>
-<script>
+<!--<script>
 $(function() {
     var imageWidth = 500;
     var $draggableImage = $(".draggable-img");
@@ -39,9 +39,9 @@ $(function() {
     .draggable-img{
         width:100%;
     }
-</style>
+</style>-->
 <body>
-    <h1>Image Processor</h1>
+    <h1>Image Processor 2</h1>
 <!--    <div id="image-container">
         <div id="img-handle">
             <img id="draggable" class="draggable-img" src="image_demo.jpg"/>
@@ -65,14 +65,15 @@ $(function() {
     <!--<div id="test" style="display:inline-block">-->
         <!--<img id="test-img" src="image_demo.jpg" alt="test"/>-->
     <!--</div>-->
+    <img id="image" src="http://www.google.com.br/images/srpr/logo3w.png" />
 
-    <div id="draggableHelper" style="display:inline-block">
-        <img id="image" src="http://www.google.com.br/images/srpr/logo3w.png" />
-    </div>
+    <div id="draggableHelper" style="display:inline-block;"><img id="image" src="http://www.google.com.br/images/srpr/logo3w.png" /></div>
 
     <script>
-        $('#draggableHelper').draggable();
-        $('#image').resizable();
+        $(function(){
+            $('#draggableHelper').draggable();
+            $('#image').resizable();
+        });
     </script>
 </body>
 <script>
