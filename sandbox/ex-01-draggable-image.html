@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <script src="../jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+    <script src="../jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
+    <title>Draggable Image</title>
+</head>
+<script>
+$(function() {
+    var imageWidth = 500;
+    var $draggableImage = $(".draggable-img");
+
+    $( "#draggable" ).draggable({cursor: "move"});
+
+    $("#zoom-in").on("click",function(){
+        imageWidth = imageWidth * 1.1;
+        $draggableImage.css("width",imageWidth);
+    });
+    $("#zoom-out").on("click",function(){
+        imageWidth = imageWidth * 0.9;
+        $draggableImage.css("width",imageWidth);
+    });
+});
+</script>
+<style>
+    #image-container{
+        width:600px;
+        height:500px;
+        border:1px solid #ccc;
+        overflow: hidden;
+    }
+    .draggable-img{
+        width:500px;
+    }
+</style>
+<body>
+    <h1>Image Processor</h1>
+    <div id="image-container">
+        <img id="draggable" class="draggable-img" src="image_demo.jpg"/>
+    </div>
+    <button id="zoom-out">Zoom Out -</button>
+    <button id="zoom-in">Zoom In +</button>
+</body>
+
+</html>

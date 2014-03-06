@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <script src="../jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+    <script src="../jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
+    <title>Draggable Image</title>
+</head>
+<script>
+$(function() {
+    var imageWidth = 500;
+    var $draggableImage = $(".draggable-img");
+
+//    $( "#draggable" ).draggable({cursor: "move"}).resizable();
+
+    $("#img-handle").draggable();
+    $("#draggable").resizable();
+
+    $("#zoom-in").on("click",function(){
+        imageWidth = imageWidth * 1.1;
+        $draggableImage.css("width",imageWidth);
+    });
+    $("#zoom-out").on("click",function(){
+        imageWidth = imageWidth * 0.9;
+        $draggableImage.css("width",imageWidth);
+    });
+});
+</script>
+<style>
+    #image-container{
+        width:600px;
+        height:500px;
+        border:1px solid #ccc;
+        overflow: hidden;
+    }
+    #img-handle{
+        width:500px;
+    }
+    .draggable-img{
+        width:100%;
+    }
+</style>
+<body>
+    <h1>Image Processor</h1>
+<!--    <div id="image-container">
+        <div id="img-handle">
+            <img id="draggable" class="draggable-img" src="image_demo.jpg"/>
+        </div>
+    </div>
+    <button id="zoom-out">Zoom Out -</button>
+    <button id="zoom-in">Zoom In +</button>
+
+    <p>Canvas:</p>
+    <canvas id="my-canvas" width="250" height="300" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#test").draggable();
+            $("#test-img").resizable();
+        });
+    </script>-->
+
+    <!--<div id="test" style="display:inline-block">-->
+        <!--<img id="test-img" src="image_demo.jpg" alt="test"/>-->
+    <!--</div>-->
+
+    <div id="draggableHelper" style="display:inline-block">
+        <img id="image" src="http://www.google.com.br/images/srpr/logo3w.png" />
+    </div>
+
+    <script>
+        $('#draggableHelper').draggable();
+        $('#image').resizable();
+    </script>
+</body>
+<script>
+
+/*var c = document.getElementById("my-canvas");
+var ctx = c.getContext("2d");*/
+
+/*
+Param 1: img - Specifies the image, canvas, or video element to use
+Param (2): sx - Optional. The x coordinate where to start clipping
+Param (3): sy - Optional. The y coordinate where to start clipping
+Param (4): swidth - Optional. The width of the clipped image
+Param (5): sheight- Optional. The height of the clipped image
+Param (6): x - The x coordinate where to place the image on the canvas
+Param (7): y - The y coordinate where to place the image on the canvas
+Param (8): width  - Optional. The width of the image to use (stretch or reduce the image)	Play it »
+Param (9): height - Optional. The height of the image to use (stretch or reduce the image)
+*/
+
+/*var img = document.getElementById("draggable");
+ctx.drawImage(img,0,0);*/
+
+</script>
+
+</html>
