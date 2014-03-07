@@ -7,5 +7,3 @@ fclose($handle);
 echo "<img src='{$_POST['imgthumb']}'>";
 ?>
 
-
-

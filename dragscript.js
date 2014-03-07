@@ -9,7 +9,11 @@ $(function(){
     var resizedThumbHeight;
 
     function makeCanvasForWidth() {
-        resizedHeight = Math.round( (resizedWidth * originalHeight) / originalWidth );
+        if (originalWidth > resizedWidth) {
+            resizedHeight = Math.round( (resizedWidth * originalHeight) / originalWidth );
+        } else {
+            resizedHeight = originalHeight;
+        }
         resizedThumbHeight = Math.round( (resizedThumbWidth * originalHeight) / originalWidth );
 
         var canvasLarge = document.getElementById("canvas-large");
